@@ -1,0 +1,30 @@
+@import 'variables.scss';
+
+.navbar {
+	width: 100%;
+	background: map-get($colors, nav-gradient);
+	color: map-get($colors, secondary-color);
+	padding: 10px 20px;
+	margin: 0;
+	display: flex;
+	box-sizing: border-box;
+}
+
+.navItems {
+	display: flex;
+	width: 150px;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: auto;
+	padding: 0 20px;
+}
+
+.navbar li {
+	list-style: none;
+}
+
+.navItems a {
+	text-decoration: none;
+	color: map-get($colors, secondary-color);
+	font-size: 1.2rem;
+}

@@ -1,8 +1,12 @@
-$colors: (
-	main_color: red,
-	secondary_color: blue,
-);
+@import 'variables.scss';
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	font-family: sans-serif;
+}
 
-.app h1 {
-	color: map-get($colors, main_color);
+.app {
+	padding: 0;
+	margin: 0;
 }
