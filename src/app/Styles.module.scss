@@ -1,0 +1,8 @@
+$colors: (
+	main_color: red,
+	secondary_color: blue,
+);
+
+.app h1 {
+	color: map-get($colors, main_color);
+}
