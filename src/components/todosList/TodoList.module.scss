@@ -1,0 +1,35 @@
+.todoContainer {
+	width: 50%;
+	padding: 0;
+	text-align: center;
+	color: #333;
+}
+
+.todo {
+	width: 100%;
+	background: #eee;
+	flood-color: #333;
+	display: flex;
+	list-style: none;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.todo + .todo {
+	margin-top: 10px;
+}
+
+.completed {
+	text-decoration: line-through;
+}
+
+.todo i {
+	margin-left: auto;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.todo input[type='checkbox'] {
+	margin-right: 10px;
+	cursor: pointer;
+}
