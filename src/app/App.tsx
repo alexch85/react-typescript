@@ -1,10 +1,11 @@
-import { ITabUserOptions } from '@testing-library/user-event';
 import React, { useState } from 'react';
 import Navbar from '../components/navbar/Navbar';
 import TodoForm from '../components/todoForm/TodoForm';
 import TodoList from '../components/todosList/TodoList';
 import { ITodo } from '../interfaces';
 import styles from './Styles.module.scss';
+
+declare var confirm: (question: string) => boolean;
 
 const App: React.FC = () => {
 	const [todos, setTodos] = useState<ITodo[]>([]);
@@ -30,7 +31,10 @@ const App: React.FC = () => {
 	};
 
 	const removeHandler = (id: number) => {
-		setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+		const shouldRemove = confirm('Are you sure you want to delete todo?');
+		if (shouldRemove) {
+			setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+		}
 	};
 
 	return (
